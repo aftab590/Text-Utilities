@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Punctuation</title>
+    <style>
+        a:hover{
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your analyzed text - {{purpose}}</h1>
+    <p style="font-size: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: coral;">
+        {% if mode == "on" %}
+        Counting Without Punctuations:- {{analyzedText1}} <br>
+        Counting With Punctuations:- {{analyzedText2}}
+        {% else %}
+        {{analyzedText}}
+        {% endif %}
+    </p>
+    <a href="/" style="text-decoration: none; font-size: 30px; cursor: pointer; color: navy; ">Back
+    </a>
+</body>
+</html>

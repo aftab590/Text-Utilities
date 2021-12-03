@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+</head>
+<body>
+    <h1>Welcome to text analyzer. Enter your Text here</h1>
+    <form action="/removepunc" method="get">
+        <textarea name="text" style="margin: 0px 31.309px 0px 0px; width: 637px; height: 124px;"></textarea><br>
+        <h4>Tick Only One</h4>
+        <input type="checkbox" id="punc" name="removepunc">
+        <label for="punc">Remove Punctuations</label><br>
+        <input type="checkbox" id="cc" name="charcount">
+        <label for="cc">Character Counts</label><br>
+        <input type="checkbox" id="ca" name="capsall">
+        <label for="ca">Remove Punctuations and Capitalize All </label><br>
+        <input type="checkbox" id="cl" name="linerem">
+        <label for="cl">Remove New Line </label>
+          <br><br>
+        <button type="submit" style="cursor: pointer;">Analyze text</button>
+
+    </form>
+
+</body>
+</html>
