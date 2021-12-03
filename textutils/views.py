@@ -7,11 +7,11 @@ def index(request):
     params = {'name': 'Aftab', 'place': 'Bhandup'}
     return render(request, 'index.html', params)
 def removepunc(request):
-    rtext = request.GET.get('text','defaut')
-    rpunc = request.GET.get('removepunc','off')
-    rcount = request.GET.get('charcount','off')
-    rcap = request.GET.get('capsall','off')
-    rline = request.GET.get('linerem','off')
+    rtext = request.POST.get('text','defaut')
+    rpunc = request.POST.get('removepunc','off')
+    rcount = request.POST.get('charcount','off')
+    rcap = request.POST.get('capsall','off')
+    rline = request.POST.get('linerem','off')
     anaText = ""
     punctuations = '''!()-[]{}:;'"<>,/?|/@#$%^&*!_~`'''
 
@@ -49,7 +49,7 @@ def removepunc(request):
     
     elif rline == "on":
         for char in rtext:
-            if char != "\n":
+            if char != "\n" and char != "\r":
                 anaText = anaText + char
         params = {  'purpose':'New Line Removed',
                 'analyzedText': anaText
