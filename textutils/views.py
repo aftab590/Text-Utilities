@@ -60,12 +60,3 @@ def removepunc(request):
         anaText = "Sorry no text found"
     
     return HttpResponse("Error")
-
-    
-# def capfirst(request):
-#     return HttpResponse("Capitalize")
-# def newlineremove(request):
-#     return HttpResponse("newlineremove")
-# def spaceremove(request):
-#     return HttpResponse("spaceremove")
-
